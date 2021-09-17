@@ -3,6 +3,7 @@ import functions as f
 def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0.5, print_cost=False):
     w, b = f.initialize_with_zeros(X_train.shape[0])
 
+    params, grads, costs = optimize(w, b, X_train, Y_train, num_iterations, learning_rate, print_cost=False)
     w = params['w']
     b = params['b']
 
